@@ -32,12 +32,8 @@ public class Shuffle extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		List<EnContents> list = new EnList().getEnList();
-
 		Collections.shuffle(list);
-			for(int i = 0; i < list.size(); i++) {
-		}
 
 		HttpSession session = request.getSession();
 		session.setAttribute("list", list);
